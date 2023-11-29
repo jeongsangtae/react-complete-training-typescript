@@ -5,10 +5,12 @@ import Todo from "./models/todo";
 function App() {
   const todos = [new Todo("React"), new Todo("TypeScript")];
 
+  const addTodoHandler = (todoText: string) => {};
+
   return (
     <div>
+      <NewTodo onAddTodo={addTodoHandler} />
       <Todos items={todos} />
-      <NewTodo />
     </div>
   );
 }
